@@ -1,21 +1,23 @@
 import ExpenseItem from "./ExpenseItem";
-import Card from "../UI/Card";
 import "./ExpenseList.scss";
 
 const ExpenseList = (props) => {
-  const listedExpenses = [];
+  if (props.expenses.length === 0) {
+      return <h2 className='expense-list__fallback'>Found no expenses.</h2>
+  }
 
-  props.expenses.forEach((expense) => {
-    listedExpenses.push(
-      <ExpenseItem
-        title={expense.title}
-        amount={expense.amount}
-        date={expense.date}
-      ></ExpenseItem>
-    );
-  });
-
-  return <Card className="expenses">{listedExpenses};</Card>;
-}
+  return (
+    <ul className="expense-list">
+      {props.expenses.map((expense) => (
+        <ExpenseItem
+          key={expense.id}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default ExpenseList;
