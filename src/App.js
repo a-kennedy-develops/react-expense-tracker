@@ -7,13 +7,13 @@ const EXPENSES_DATA = [
     id: "e1",
     title: "Groceries",
     amount: 94.12,
-    date: new Date(2021, 4, 14),
+    date: new Date(2021, 9, 14),
   },
   {
     id: "e2",
     title: "Car Payment",
     amount: 449.49,
-    date: new Date(2021, 4, 1),
+    date: new Date(2021, 3, 1),
   },
   {
     id: "e3",
@@ -25,7 +25,7 @@ const EXPENSES_DATA = [
     id: "e4",
     title: "Batteries",
     amount: 12.04,
-    date: new Date(2019, 4, 17),
+    date: new Date(2019, 2, 17),
   },
 ];
 
